@@ -1,0 +1,65 @@
+<!--pages/list/list.wxml-->
+
+
+<view class="weui-loadmore " hidden="{{!searchLoading}}">
+	<view class="weui-loadmore__tips weui-loadmore__tips_in-line">松手，给你好看~</view>
+</view>
+<!-- top -->
+<view id="nav_top">
+	<view id="top_right" bindtap="jump_list">
+		<image id="top_right_img" src="../../image/date.png" />
+		<view>week <span>12</span></view>
+	</view>
+	<view id="nav_date">{{date}}</view>
+</view>
+
+<view id="sec_nav">
+	<view class="year">2019</view>
+	<view class="month">
+		<view class="month_line"></view>
+		<view class="month_date">6月</view>
+		<view class="month_line"></view>
+	</view>
+
+</view>
+
+<!-- content -->
+<view class="flex-container">
+	<view class="flex-item">
+		<image src="../../image/new.jpg"></image>
+		<view>Week 21</view>
+		<view>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</view>
+	</view>
+	<view class="flex-item">
+		<image src="../../image/new.jpg"></image>
+		<view>Week 21</view>
+		<view>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</view>
+	</view>
+	<view class="flex-item">
+		<image src="../../image/new.jpg"></image>
+		<view>Week 21</view>
+		<view>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</view>
+	</view>
+	<view class="flex-item">
+		<image src="../../image/new.jpg"></image>
+		<view>Week 21</view>
+		<view>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</view>
+	</view>
+	<view class="flex-item">
+		<image src="../../image/new.jpg"></image>
+		<view>Week 21</view>
+		<view>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</view>
+	</view>
+	
+	
+	
+</view>
+
+
+<!-- 上拉加载 -->
+<view class="weui-loadmore" hidden="{{!searchLoadingComplete}}">
+	<view class="weui-loadmore__tips weui-loadmore__tips_in-line">哎呀，已经到底了~</view>
+</view>
+<view class="weui-loadmore" hidden="{{!isHideLoadMore}}">
+	<view class="weui-loadmore__tips weui-loadmore__tips_in-line">加载更多</view>
+</view>

@@ -1,0 +1,74 @@
+@import '../../weui.wxss';
+page{
+  font-size: 36rpx;
+}
+.weui-loadmore__tips{
+	font-size:30rpx;
+}
+#nav_top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #404040;
+	color: #fff;
+	font-size: 30rpx;
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+}
+#top_right {
+	display: flex;
+	align-items: center;
+}
+#top_right span{
+	color:yellow
+}
+#top_right_img {
+	height: 70rpx;
+	width: 70rpx;
+	padding: 20rpx;
+}
+#nav_date{
+	padding: 30rpx;
+}
+#new {
+	display: flex;
+	justify-content: center;
+	padding: 150rpx 40rpx 40rpx 40rpx;
+
+}
+#new image {
+	width: 100%;
+}
+#content {
+	padding: 10rpx 30rpx;
+
+}
+#title {
+	
+	word-break: break-all;
+	
+	font-weight: 800;
+}
+.con_top {
+	display: flex;
+	padding-bottom: 20rpx;
+
+}
+.auther {
+	font-size: 30rpx;
+	padding-right: 30rpx;
+
+}
+.top_date {
+	font-size: 30rpx;
+	color: #909399;
+}
+#art_content {
+	font-size: 30rpx;
+
+}
+#article image {
+	padding: 10rpx 0rpx;
+	width: 100%;
+}

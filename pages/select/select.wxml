@@ -1,0 +1,29 @@
+<!--pages/select/select.wxml-->
+
+<view>
+	<swiper autoplay="true" interval="3000" duration="500">
+		<block wx:for="{{slide_imgUrls}}" wx:for-item="item_slide">
+			<swiper-item>
+				<image src="{{item_slide}}" class="slide-image" />
+			</swiper-item>
+		</block>
+	</swiper>
+</view>
+<view class="container">
+	<view class="conta_left">
+		<scroll-view scroll-y class="scroll-view-y" scroll-into-view="{{rId}}" scroll-top="{{scrollTop}}">
+			<view wx:for="{{rightId}}" wx:for-index="" wx:for-item="rId" class="scroll-y-item">{{rId}}</view>
+		</scroll-view>
+	</view>
+
+
+	<view class="conta_right">
+		<scroll-view scroll-y class="scroll-view-y" scroll-into-view="{{rId}}" scroll-top="{{scrollTop}}">
+			<block wx:for="{{slide_imgUrls}}" wx:for-item="item_slide">
+				<image src="{{item_slide}}" />
+			</block>
+		</scroll-view>
+	</view>
+
+
+</view>

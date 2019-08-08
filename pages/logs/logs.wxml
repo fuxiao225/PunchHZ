@@ -1,0 +1,76 @@
+<!--logs.wxml-->
+
+<view class="weui-loadmore " hidden="{{!searchLoading}}">
+	<view class="weui-loadmore__tips weui-loadmore__tips_in-line">松手，给你好看~</view>
+</view>
+
+<view class="weui-loadmore weui-loadmore_line" hidden="{{!isNoData}}">
+	<view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+</view>
+
+
+
+<!--pages/shopHome/shopHome.wxml-->
+
+
+
+
+
+<!-- top -->
+<view id="nav_top">
+	<view id="top_right" bindtap="jump">
+		<image id="top_right_img" src="../../image/date.png" />
+		<view>week <span>12</span></view>
+	</view>
+	<view id="nav_date">{{date}}</view>
+</view>
+
+
+<!-- <swiper duration="500" current='{{current}}' bindchange='bindChange'>
+	<swiper-item style="height:100%;"> -->
+<!-- <scroll-view scroll-y style="height:100%;"> -->
+<!-- 纵向滑动 -->
+<view id="new">
+	<block wx:for="{{imgUrls}}" wx:for-index="" wx:for-item="item_img">
+		<image id="new_img" src='{{item_img}}'></image>
+	</block>
+</view>
+
+<!-- </scroll-view>	 -->
+<!-- </swiper-item>
+</swiper> -->
+<view id="content">
+
+	<view id="con_top">
+		<view class="con_top">
+			<h1 id="title">标题 | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</h1>
+		</view>
+		<view class="con_top">
+			<view class="auther">作者：<span>小八</span></view>
+			<view class="top_date">2018-09-10</view>
+		</view>
+	</view><!-- con_top -->
+
+	<view id="article">
+		<view id="art_content">
+			Back on the African savannah, where a future king of beasts has just been born. Simba worships his father, the
+			lion
+			king mufasa, and knows his royal destiny. But not everyone in the kingdom is celebrating the arrival of the
+			prince
+			-- the lion's younger brother scar, the former heir to the throne, has his own plans. The struggle for the throne
+			ravaged the land of glory, with betrays, tragedies and conflicts that eventually led to simba's exile. Then simba
+			makes a pair of strange new friends, with their help, he will learn to grow and take back what was meant to be
+			his.
+		</view>
+		<image src="../../image/con_img.jpg"></image>
+	</view><!-- article -->
+
+</view><!-- content -->
+
+<!-- 上拉加载 -->
+<view class="weui-loadmore" hidden="{{!searchLoadingComplete}}">
+	<view class="weui-loadmore__tips weui-loadmore__tips_in-line">哎呀，已经到底了~</view>
+</view>
+<view class="weui-loadmore" hidden="{{!isHideLoadMore}}">
+	<view class="weui-loadmore__tips weui-loadmore__tips_in-line">加载更多</view>
+</view>

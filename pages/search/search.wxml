@@ -1,0 +1,144 @@
+<!--pages/search/search.wxml-->
+<view id="nav">
+	<view class="weui-search-bar">
+		<view class="weui-search-bar__form">
+			<view class="weui-search-bar__box">
+				<icon class="weui-icon-search_in-box" type="search" size="16"></icon>
+				<input type="text" class="weui-search-bar__input" placeholder="搜索" bindinput="search_content" name="search_content"
+				 value="{{inputVal}}" focus="{{inputShowed}}" />
+				<view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+					<icon type="clear" size="14"></icon>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view id="search">搜索</view>
+</view>
+
+
+<!-- 搜索内容 -->
+
+<scroll-view scroll-y="true" class='swiper_in' style="height: 100%;" bindscrolltoupper="refresh" bindscrolltolower="loadMore">
+	<!-- 下拉刷新 -->
+	<view class="header" hidden="{{hideHeader}}">
+		<view>松手，给你好看~</view>
+
+	</view>
+	<view class="swiper_list">
+		<view class="list_left">
+			<view class="l_left_top">第十八届杭州吃货节</view>
+			<view class="l_left_bottom">
+				<image mode="{{mode}}" src="../../image/distance.png"></image><text>胜利河美食街</text>
+			</view>
+			<view class="l_left_bottom">
+				<image mode="{{mode}}" src="../../image/time.png"></image><text>2019.06.10-6.12</text>
+			</view>
+		</view>
+		<view class="list_right">
+			<image mode="{{mode}}" src="../../image/con_img.jpg"></image>
+		</view>
+	</view>
+	<view class="swiper_list">
+		<view class="list_left">
+			<view class="l_left_top">第十八届杭州吃货节</view>
+			<view class="l_left_bottom">
+				<image mode="{{mode}}" src="../../image/distance.png"></image><text>胜利河美食街</text>
+			</view>
+			<view class="l_left_bottom">
+				<image mode="{{mode}}" src="../../image/time.png"></image><text>2019.06.10-6.12</text>
+			</view>
+		</view>
+		<view class="list_right">
+			<image mode="{{mode}}" src="../../image/con_img.jpg"></image>
+		</view>
+	</view>
+	<view class="swiper_list">
+		<view class="list_left">
+			<view class="l_left_top">第十八届杭州吃货节</view>
+			<view class="l_left_bottom">
+				<image mode="{{mode}}" src="../../image/distance.png"></image><text>胜利河美食街</text>
+			</view>
+			<view class="l_left_bottom">
+				<image mode="{{mode}}" src="../../image/time.png"></image><text>2019.06.10-6.12</text>
+			</view>
+		</view>
+		<view class="list_right">
+			<image mode="{{mode}}" src="../../image/con_img.jpg"></image>
+		</view>
+	</view>
+	<view class="swiper_list">
+		<view class="list_left">
+			<view class="l_left_top">第十八届杭州吃货节</view>
+			<view class="l_left_bottom">
+				<image mode="{{mode}}" src="../../image/distance.png"></image><text>胜利河美食街</text>
+			</view>
+			<view class="l_left_bottom">
+				<image mode="{{mode}}" src="../../image/time.png"></image><text>2019.06.10-6.12</text>
+			</view>
+		</view>
+		<view class="list_right">
+			<image mode="{{mode}}" src="../../image/con_img.jpg"></image>
+		</view>
+	</view>
+	<view class="swiper_list">
+		<view class="list_left">
+			<view class="l_left_top">第十八届杭州吃货节</view>
+			<view class="l_left_bottom">
+				<image mode="{{mode}}" src="../../image/distance.png"></image><text>胜利河美食街</text>
+			</view>
+			<view class="l_left_bottom">
+				<image mode="{{mode}}" src="../../image/time.png"></image><text>2019.06.10-6.12</text>
+			</view>
+		</view>
+		<view class="list_right">
+			<image mode="{{mode}}" src="../../image/con_img.jpg"></image>
+		</view>
+	</view>
+	<view class="swiper_list">
+		<view class="list_left">
+			<view class="l_left_top">第十八届杭州吃货节</view>
+			<view class="l_left_bottom">
+				<image mode="{{mode}}" src="../../image/distance.png"></image><text>胜利河美食街</text>
+			</view>
+			<view class="l_left_bottom">
+				<image mode="{{mode}}" src="../../image/time.png"></image><text>2019.06.10-6.12</text>
+			</view>
+		</view>
+		<view class="list_right">
+			<image mode="{{mode}}" src="../../image/con_img.jpg"></image>
+		</view>
+	</view>
+	<view class="swiper_list">
+		<view class="list_left">
+			<view class="l_left_top">第十八届杭州吃货节</view>
+			<view class="l_left_bottom">
+				<image mode="{{mode}}" src="../../image/distance.png"></image><text>胜利河美食街</text>
+			</view>
+			<view class="l_left_bottom">
+				<image mode="{{mode}}" src="../../image/time.png"></image><text>2019.06.10-6.12</text>
+			</view>
+		</view>
+		<view class="list_right">
+			<image mode="{{mode}}" src="../../image/con_img.jpg"></image>
+		</view>
+	</view>
+	<view class="swiper_list">
+		<view class="list_left">
+			<view class="l_left_top">第十八届杭州吃货节</view>
+			<view class="l_left_bottom">
+				<image mode="{{mode}}" src="../../image/distance.png"></image><text>胜利河美食街</text>
+			</view>
+			<view class="l_left_bottom">
+				<image mode="{{mode}}" src="../../image/time.png"></image><text>2019.06.10-6.12</text>
+			</view>
+		</view>
+		<view class="list_right">
+			<image mode="{{mode}}" src="../../image/con_img.jpg"></image>
+		</view>
+	</view>
+	<!-- 上拉加载 -->
+	<view class="bottom" hidden="{{hideBottom}}">
+		<view>加载更多</view>
+		<!-- <view>{{refreshTime}}</view> -->
+	</view>
+</scroll-view>

@@ -1,0 +1,26 @@
+/**index.wxss**/
+page{
+	
+	font-size: 34rpx;
+}
+    .store_avatar {
+    	width: 180rpx;
+    	height: 180rpx;
+    	border-radius: 50%;
+    }
+
+    .mian {
+    	display: flex;
+    	flex-direction: column;
+    	align-items: center;
+    	height: 100vh;
+    	justify-content: space-around;
+    }
+
+    #login {
+    	background-color: #1AAD19;
+    	border:none;
+        color: #FFFFFF;
+		letter-spacing: 2rpx;
+		font-size: 34rpx;
+    }

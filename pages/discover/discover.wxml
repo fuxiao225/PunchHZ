@@ -1,0 +1,237 @@
+<view id="nav">
+	<view class="weui-search-bar">
+		<view class="weui-search-bar__form">
+			<view class="weui-search-bar__box">
+				<icon class="weui-icon-search_in-box" type="search" size="16"></icon>
+				<input type="text" class="weui-search-bar__input" placeholder="搜索活动" value="{{inputVal}}" focus="{{inputShowed}}"
+				 bindinput="search_content" />
+				<view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+					<icon type="clear" size="14"></icon>
+				</view>
+			</view><!-- 
+			<label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+				<icon class="weui-icon-search" type="search" size="16"></icon>
+				<view class="weui-search-bar__text">搜索活动</view>
+			</label> -->
+		</view>
+	</view>
+	<view id="search"  bindtap="search">搜索</view>
+</view>
+
+<view class="weui-cells searchbar-result" wx:if="{{inputVal.length > 0}}">
+	<navigator url="" class="weui-cell" hover-class="weui-cell_active">
+		<view class="weui-cell__bd">
+			<view>实时搜索文本</view>
+		</view>
+	</navigator>
+	<navigator url="" class="weui-cell" hover-class="weui-cell_active">
+		<view class="weui-cell__bd">
+			<view>实时搜索文本</view>
+		</view>
+	</navigator>
+	<navigator url="" class="weui-cell" hover-class="weui-cell_active">
+		<view class="weui-cell__bd">
+			<view>实时搜索文本</view>
+		</view>
+	</navigator>
+	<navigator url="" class="weui-cell" hover-class="weui-cell_active">
+		<view class="weui-cell__bd">
+			<view>实时搜索文本</view>
+		</view>
+	</navigator>
+</view>
+
+<!-- 选择卡 -->
+
+<view class='container'>
+	<!--Tab布局-->
+	<view class='title'>
+		<view class="{{0 == currentIndex ? 'titleSel' : 'titleUnSel'}}" bindtap='titleClick' data-idx='0'>
+			<text>全部</text>
+			<hr class="{{0 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}}" />
+		</view>
+		<view class="{{1 == currentIndex ? 'titleSel' : 'titleUnSel'}}" bindtap='titleClick' data-idx='1'>
+			<text>演唱会</text>
+			<hr class="{{1 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
+		</view>
+		<view class="{{2 == currentIndex ? 'titleSel' : 'titleUnSel'}}" bindtap='titleClick' data-idx='2'>
+			<text>亲子</text>
+			<hr class="{{2 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
+		</view>
+		<view class="{{3== currentIndex ? 'titleSel' : 'titleUnSel'}}" bindtap='titleClick' data-idx='3'>
+			<text>展览</text>
+			<hr class="{{3 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
+		</view>
+		<view class="{{4== currentIndex ? 'titleSel' : 'titleUnSel'}}" bindtap='titleClick' data-idx='4'>
+			<text>运动</text>
+			<hr class="{{4 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
+		</view>
+		<view class="{{5 == currentIndex ? 'titleSel' : 'titleUnSel'}}" bindtap='titleClick' data-idx='5'>
+			<text>户外</text>
+			<hr class="{{5 == currentIndex ? 'headerLineSel' : 'headerLineUnsel'}} " />
+		</view>
+
+	</view>
+
+	<!--内容布局-->
+	<swiper class='swiper' bindchange='pagechange' current='{{currentIndex}}' bindchange="switchTab">
+		<swiper-item class='swiper_item'>
+
+			<scroll-view scroll-y="true" class='swiper_in' style="height: 100%;" bindscrolltoupper="refresh" bindscrolltolower="loadMore">
+				<!-- 下拉刷新 -->
+				<view class="header" hidden="{{hideHeader}}">
+					<view>松手，给你好看~</view>
+
+				</view>
+				<view class="swiper_list">
+					<view class="list_left">
+						<view class="l_left_top">第十八届杭州吃货节</view>
+						<view class="l_left_bottom">
+							<image mode="{{mode}}" src="../../image/distance.png"></image><text>胜利河美食街</text>
+						</view>
+						<view class="l_left_bottom">
+							<image mode="{{mode}}" src="../../image/time.png"></image><text>2019.06.10-6.12</text>
+						</view>
+					</view>
+					<view class="list_right">
+						<image mode="{{mode}}" src="../../image/con_img.jpg"></image>
+					</view>
+				</view>
+				<view class="swiper_list">
+					<view class="list_left">
+						<view class="l_left_top">第十八届杭州吃货节</view>
+						<view class="l_left_bottom">
+							<image mode="{{mode}}" src="../../image/distance.png"></image><text>胜利河美食街</text>
+						</view>
+						<view class="l_left_bottom">
+							<image mode="{{mode}}" src="../../image/time.png"></image><text>2019.06.10-6.12</text>
+						</view>
+					</view>
+					<view class="list_right">
+						<image mode="{{mode}}" src="../../image/con_img.jpg"></image>
+					</view>
+				</view>
+				<view class="swiper_list">
+					<view class="list_left">
+						<view class="l_left_top">第十八届杭州吃货节</view>
+						<view class="l_left_bottom">
+							<image mode="{{mode}}" src="../../image/distance.png"></image><text>胜利河美食街</text>
+						</view>
+						<view class="l_left_bottom">
+							<image mode="{{mode}}" src="../../image/time.png"></image><text>2019.06.10-6.12</text>
+						</view>
+					</view>
+					<view class="list_right">
+						<image mode="{{mode}}" src="../../image/con_img.jpg"></image>
+					</view>
+				</view>
+				<view class="swiper_list">
+					<view class="list_left">
+						<view class="l_left_top">第十八届杭州吃货节</view>
+						<view class="l_left_bottom">
+							<image mode="{{mode}}" src="../../image/distance.png"></image><text>胜利河美食街</text>
+						</view>
+						<view class="l_left_bottom">
+							<image mode="{{mode}}" src="../../image/time.png"></image><text>2019.06.10-6.12</text>
+						</view>
+					</view>
+					<view class="list_right">
+						<image mode="{{mode}}" src="../../image/con_img.jpg"></image>
+					</view>
+				</view>
+				<view class="swiper_list">
+					<view class="list_left">
+						<view class="l_left_top">第十八届杭州吃货节</view>
+						<view class="l_left_bottom">
+							<image mode="{{mode}}" src="../../image/distance.png"></image><text>胜利河美食街</text>
+						</view>
+						<view class="l_left_bottom">
+							<image mode="{{mode}}" src="../../image/time.png"></image><text>2019.06.10-6.12</text>
+						</view>
+					</view>
+					<view class="list_right">
+						<image mode="{{mode}}" src="../../image/con_img.jpg"></image>
+					</view>
+				</view>
+				<view class="swiper_list">
+					<view class="list_left">
+						<view class="l_left_top">第十八届杭州吃货节</view>
+						<view class="l_left_bottom">
+							<image mode="{{mode}}" src="../../image/distance.png"></image><text>胜利河美食街</text>
+						</view>
+						<view class="l_left_bottom">
+							<image mode="{{mode}}" src="../../image/time.png"></image><text>2019.06.10-6.12</text>
+						</view>
+					</view>
+					<view class="list_right">
+						<image mode="{{mode}}" src="../../image/con_img.jpg"></image>
+					</view>
+				</view>
+				<view class="swiper_list">
+					<view class="list_left">
+						<view class="l_left_top">第十八届杭州吃货节</view>
+						<view class="l_left_bottom">
+							<image mode="{{mode}}" src="../../image/distance.png"></image><text>胜利河美食街</text>
+						</view>
+						<view class="l_left_bottom">
+							<image mode="{{mode}}" src="../../image/time.png"></image><text>2019.06.10-6.12</text>
+						</view>
+					</view>
+					<view class="list_right">
+						<image mode="{{mode}}" src="../../image/con_img.jpg"></image>
+					</view>
+				</view>
+				<view class="swiper_list">
+					<view class="list_left">
+						<view class="l_left_top">第十八届杭州吃货节</view>
+						<view class="l_left_bottom">
+							<image mode="{{mode}}" src="../../image/distance.png"></image><text>胜利河美食街</text>
+						</view>
+						<view class="l_left_bottom">
+							<image mode="{{mode}}" src="../../image/time.png"></image><text>2019.06.10-6.12</text>
+						</view>
+					</view>
+					<view class="list_right">
+						<image mode="{{mode}}" src="../../image/con_img.jpg"></image>
+					</view>
+				</view>
+				<!-- 上拉加载 -->
+				<view class="bottom" hidden="{{hideBottom}}">
+					<view>加载更多</view>
+					<!-- <view>{{refreshTime}}</view> -->
+				</view>
+			</scroll-view>
+
+
+
+
+		</swiper-item>
+			<swiper-item class='swiper' class='swiper'>
+			<view wx:for="{{concert}}" class='recordItem'>
+				<view class='name'>昵称：{{item}}</view>
+			</view>
+		</swiper-item>
+		<!-- <swiper-item class='swiper' class='swiper'>
+			<view wx:for="{{par_child}}" class='recordItem'>
+				<view class='name'>昵称：{{item}}</view>
+			</view>
+		</swiper-item>
+		<swiper-item class='swiper' class='swiper'>
+			<view wx:for="{{exhibition}}" class='recordItem'>
+				<view class='name'>昵称：{{item}}</view>
+			</view>
+		</swiper-item>
+		<swiper-item class='swiper' class='swiper'>
+			<view wx:for="{{sport}}" class='recordItem'>
+				<view class='name'>昵称：{{item}}</view>
+			</view>
+		</swiper-item>
+		<swiper-item class='swiper' class='swiper'>
+			<view wx:for="{{outside}}" class='recordItem'>
+				<view class='name'>昵称：{{item}}</view>
+			</view>
+		</swiper-item>-->
+
+	</swiper>
+
+</view>

@@ -1,0 +1,51 @@
+{
+	"pages": [
+		"pages/shopHome/shopHome",
+		"pages/list/list",
+		"pages/select/select",
+		"pages/discover/discover",
+		"pages/search/search",
+		"pages/user/user",
+		"pages/phone/phone",
+		"pages/logs/logs"
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#fff",
+		"navigationBarTitleText": "城市日历",
+		"navigationBarTextStyle": "black",
+		"enablePullDownRefresh": false
+	},
+	"tabBar": {
+		"color": "#CBE1D7",
+		"selectedColor": "#57BB8B",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+				"pagePath": "pages/shopHome/shopHome",
+				"text": "打卡杭州",
+				"iconPath": "image/home0.png",
+				"selectedIconPath": "image/home1.png"
+			},
+			{
+				"pagePath": "pages/select/select",
+				"text": "精选",
+				"iconPath": "image/home0.png",
+				"selectedIconPath": "image/home1.png"
+			},
+			{
+				"pagePath": "pages/discover/discover",
+				"text": "发现",
+				"iconPath": "image/home0.png",
+				"selectedIconPath": "image/home1.png"
+			},
+			{
+				"pagePath": "pages/user/user",
+				"text": "我的",
+				"iconPath": "image/home0.png",
+				"selectedIconPath": "image/home1.png"
+			}
+		]
+	},
+	"sitemapLocation": "sitemap.json"
+}

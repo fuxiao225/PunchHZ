@@ -1,0 +1,94 @@
+/* pages/list/list.wxss */
+@import '../../weui.wxss';
+page{
+  font-size: 36rpx;
+}
+.weui-loadmore__tips{
+	font-size:30rpx;
+}
+#nav_top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #404040;
+	color: #fff;
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+}
+
+#top_right {
+	display: flex;
+	align-items: center;
+}
+
+#top_right span {
+	color: yellow
+}
+
+#top_right_img {
+	height: 70rpx;
+	width: 70rpx;
+	padding: 20rpx;
+}
+
+#nav_date {
+	padding: 30rpx;
+}
+
+#sec_nav {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	font-size: 32rpx;
+}
+
+.year {
+	color: #909399;
+	padding: 10rpx 0rpx;
+}
+
+.month {
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.month_date {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 1;
+}
+
+.month_line {
+	flex: 4;
+	border-bottom: solid 1rpx #C0C4CC;
+}
+
+.flex-container {
+	width: 100%;
+	margin-top: 36rpx;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.flex-item image{
+	width: 100%;
+}
+.flex-item {
+	display: flex;
+	flex-wrap: wrap;
+	margin:2% 4%;
+    width: 42%;
+	word-break: break-all;
+	border-collapse: collapse;
+}
+
+/* #whole_list{
+	display: flex;
+}
+.list{
+	width: 40%;
+} */
