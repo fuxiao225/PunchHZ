@@ -86,7 +86,7 @@ Page({
             delay: 100
         });
 
-        animation.opacity(0.2).translate(500, 0).step()
+        animation.opacity(0.2).translate(350, 0).step()
         this.setData({
             anima: animation.export()
         })
