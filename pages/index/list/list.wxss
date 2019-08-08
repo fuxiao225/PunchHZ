@@ -1,0 +1,49 @@
+.list-container{
+  height: 100%;
+  padding-top: 120rpx;
+  background: #fff;
+}
+.year{
+  height: 100%;
+  margin-bottom: 20rpx;
+  /* background: cyan; */
+}
+.year-top{
+  height: 120rpx;
+  /* border-bottom: 1rpx solid #000000; */
+  text-align: center;
+}
+.num{
+  color: #cccccc;
+}
+.month:before{
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #999;/*颜色需与主题大背景色一致*/ 
+    position: relative;
+    top: 10px;/*调节线高*/
+    left: 0;
+}
+.msg{
+    display: inline-block;
+    background: #fff;
+    padding: 0 18px 0 18px;
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+}
+.year-list{
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0rpx 40rpx 0rpx 40rpx;
+}
+.year-item{
+  width: 47%;
+  height: 400rpx;
+  border: 1rpx solid #333;
+  margin-top: 30rpx;
+}

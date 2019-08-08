@@ -1,0 +1,30 @@
+.top{
+  position: fixed;
+  width: 100%;
+  height: 88rpx;
+  background: #666666;
+  display: flex;
+  z-index: 1;
+}
+.top-left{
+  flex: 1;
+  height: 100%;
+  color: #fff;
+  display: flex;
+}
+.top-left>image{
+  width: 70rpx;
+  height: 70rpx;
+  margin-left: 40rpx;
+  margin-top: 9rpx;
+}
+.top-left>text{
+  margin: 25rpx 20rpx;
+}
+.top-right{
+  flex: 1;
+  text-align: right;
+  line-height: 88rpx;
+  margin-right: 30rpx;
+  color: #fff;
+}

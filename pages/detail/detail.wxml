@@ -1,0 +1,51 @@
+<view class="detail-page">
+    <view class="header">
+        <image src="../../image/index_page.jpg"></image>
+    </view>
+    <view class="content">
+        <view class="content-top">
+            <view class="top-title">标题内容</view>
+            <view class="top-price">活动费用：97元</view>
+            <view class="top-time">活动时间：
+                <text>2019.08.07-08.27</text>
+            </view>
+            <view class="top-address">地点：上城区海运国际</view>
+        </view>
+        <view class="content-msg">
+            <view>活动详情：</view>
+            <view class="msg">下党乡位于闽东宁德的大山深处，直至上世纪八十年代末，全乡没有一条公路，交通十分不便，素有“车岭车上天，九岭爬九年”的说法。习近平总书记在福建工作期间，曾三进下党调研指导扶贫工作。第一次是1989年7月19日，时任宁德地委书记习近平乘车近3个小时、步行2个多小时，冒着酷暑到下党乡访贫问苦，帮助解决发展难题。近日，受乡亲们委托，下党乡6位党员干部群众给习近平总书记写信，汇报下党脱贫的喜讯，表达了对党中央和总书记的感恩之情。下党乡位于闽东宁德的大山深处，直至上世纪八十年代末，全乡没有一条公路，交通十分不便，素有“车岭车上天，九岭爬九年”的说法。习近平总书记在福建工作期间，曾三进下党调研指导扶贫工作。第一次是1989年7月19日，时任宁德地委书记习近平乘车近3个小时、步行2个多小时，冒着酷暑到下党乡访贫问苦，帮助解决发展难题。近日，受乡亲们委托，下党乡6位党员干部群众给习近平总书记写信，汇报下党脱贫的喜讯，表达了对党中央和总书记的感恩之情</view>
+        </view>
+    </view>
+    <view class="footer">
+        <view class="back-home" bindtap="goHome">
+            <view class="home-icon">
+                <image src="../../icon/Home.png"></image>
+            </view>
+            <view class="home-msg">返回主页</view>
+        </view>
+        <view class="collect">
+            <view class="collect-icon">
+                <image src="../../icon/collect.png"></image>
+            </view>
+            <view class="collect-msg">收藏</view>
+        </view>
+        <view class="share-btn">
+            <view class="btn" bindtap="toShare">立即分享</view>
+        </view>
+    </view>
+</view>
+<view class="popup" hidden="{{showShare}}">
+    <view class="popup-box">
+        <view class="box-top">
+            <view class="friend">
+                <image src="../../icon/friend.png"></image>
+                <view>分享好友</view>
+            </view>
+            <view class="poster">
+                <image src="../../icon/poster.png"></image>
+                <view>生成海报</view>
+            </view>
+        </view>
+        <view class="box-bottom" bindtap="closeShare">取消</view>
+    </view>
+</view>

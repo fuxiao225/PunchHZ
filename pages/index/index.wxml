@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class="index-page" bindtouchstart="touchStart" bindtouchend="touchEnd" animation="{{anima}}">
+  <!-- 头部 -->
+  <navbar></navbar>
+  
+  <view class="container">
+    <!-- 图片部分 -->
+    <view class="container-img">
+      <image src="../../image/index_page.jpg" mode="aspectFit"></image>
+    </view>
+    <!-- 稿件部分 -->
+    <view class="container-news">
+      <view class="title-author">
+        <view class="title">新闻标题</view>
+        <view class="author-time">
+          <text class="author">作者：九七</text>
+          <text class="time" decode="true">&nbsp;&nbsp;&nbsp;1997-06-20</text>
+        </view>
+      </view>
+      <view class="news-content">
+            
+      </view>
+    </view>
+  </view>
+
+  <!-- 分享部分 -->
+  <view class="share">
+    <image src="../../icon/share.png"></image>
+  </view>    
+    
+  
+</view>

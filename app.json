@@ -1,0 +1,39 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/choice/choice",
+        "pages/detail/detail",
+        "pages/find/find",
+        "pages/mine/mine",
+        "pages/index/list/list",
+        "pages/index/slippage/slippage"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "城市日历",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "selectedColor": "#0000ff",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "打卡杭州"
+            },
+            {
+                "pagePath": "pages/choice/choice",
+                "text": "精选"
+            },
+            {
+                "pagePath": "pages/find/find",
+                "text": "发现"
+            },
+            {
+                "pagePath": "pages/mine/mine",
+                "text": "我的"
+            }
+        ]
+    },
+    "sitemapLocation": "sitemap.json"
+}

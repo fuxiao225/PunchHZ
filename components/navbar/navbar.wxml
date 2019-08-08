@@ -1,0 +1,9 @@
+<view class="top">
+    <view class="top-left" bindtap="goList">
+      <image src="../../icon/calendar.png"></image>
+      <text>WEEK 15</text>
+    </view>
+    <view class="top-right">
+      <text>{{time}}</text>
+    </view>
+</view>

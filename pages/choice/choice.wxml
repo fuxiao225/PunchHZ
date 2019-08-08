@@ -1,0 +1,30 @@
+<view class="choice-page">
+    <view class="pull-down">松开，给你好看~</view>
+    <!-- 轮播图 -->
+    <swiper autoplay="true" interval="3000" circular="true" class="swiper">
+        <swiper-item>
+            <image src="../../image/index_page.jpg"></image>
+        </swiper-item>
+        <swiper-item>
+            <image src="../../image/index_page.jpg"></image>
+        </swiper-item>
+    </swiper>
+    <view class="page-container">
+        <view class="left">
+            <movable-area>
+                <movable-view direction="vertical" bindchange="change" y="{{leftY}}"></movable-view>
+            </movable-area>
+        </view>
+        <view class="right">
+            <view class="right-item">
+                <view class="item-top">
+                    <view class="top-month">9月16日</view>
+                    <view class="top-week">今天</view>
+                </view>
+                <view class="item-card" bindtap="goDetail"></view>
+                <view class="item-card"></view>
+                <view class="item-card"></view>
+            </view>
+        </view>
+    </view>
+</view>
