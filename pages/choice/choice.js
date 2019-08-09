@@ -5,8 +5,9 @@ Page({
      * 页面的初始数据
      */
     data: {
-        leftY:10,
-        swiperH:0
+        leftY:0,
+        swiperH:0,
+        show:false
     },
 
     /**
@@ -17,7 +18,7 @@ Page({
         let query = wx.createSelectorQuery();
         query.select('.swiper').boundingClientRect(rect => {
             let height = rect.height;
-            console.log(height);
+            // console.log(height);
             this.setData({
                 swiperH:height
             })
@@ -57,14 +58,9 @@ Page({
      * 页面相关事件处理函数--监听用户下拉动作
      */
     onPullDownRefresh: function() {
-
-
-
         setTimeout(function () {
             wx.stopPullDownRefresh() //停止下拉刷新
         }, 500);
-  
-     
     },
 
     /**
@@ -95,34 +91,26 @@ Page({
         })
     },
     change:function(e){
-        console.log(e.detail.y)
-        wx.pageScrollTo({
-            scrollTop: e.detail.y + this.data.swiperH,
-            duration:1000
-        })
+        console.log(e.detail.y.toFixed(0))
+        let that = this
+       
+            wx.pageScrollTo({
+                scrollTop: e.detail.y.toFixed(0) ,
+                duration: 500
+            })
+   
     },
     onPageScroll: function (e) {
-        console.log(e.scrollTop)
-        // let that = this
-        // setTimeout(function(){
-        //     that.setData({
-        //         leftY: e.scrollTop - that.data.swiperH
-        //     })
-        // },1000)
+        console.log(e.scrollTop.toFixed(0))
+        let that = this
+            // that.setData({
+            //     leftY: e.scrollTop.toFixed(0) ,
+            // })
     },
-    share:function(){
-        console.log(111111111111)
-        wx.showModal({
-            title: '提示',
-            content: '这是一个模态弹窗',
-            success(res) {
-                if (res.confirm) {
-                    console.log('用户点击确定')
-                } else if (res.cancel) {
-                    console.log('用户点击取消')
-                }
-            }
+    showActive:function (e) {//点击显示小球颜色
+    console.log(e)
+        this.setData({
+            show:true
         })
     }
-
 })

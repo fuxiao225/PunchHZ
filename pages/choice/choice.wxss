@@ -27,34 +27,31 @@ image {
     display: flex;
     position: relative;
 }
-
-.left {
-    position: absolute;
-    width: 10rpx;
-    height: 100%;
-    padding: 0 30rpx;
-}
-
-movable-area {
-    width: 5rpx;
-    height: 100%; 
+.left{
+    width: 1rpx;
+    margin-left: 30rpx;
     background: #ccc;
+    border: 1rpx solid #ccc;
+    overflow: hidden;
+    padding-bottom: 9999rpx;
+    margin-bottom: -9999rpx;
 }
-
-movable-view {
-    width: 30rpx;
-    height: 30rpx;
-    border-radius: 50%;
-    background: #666;
-    margin-left: -11rpx;
-    /* margin-top: 20rpx; */
-}
-
 .right {
-    margin-left: 90rpx;
+    margin-left: 60rpx;
     flex: 1;
 }
-
+.box{
+    width: 30rpx;
+    height: 30rpx;
+    background: #fff;
+    border: 1rpx solid #333;
+    border-radius: 50%;
+    position: absolute;
+    left: 16rpx;
+}
+.active{
+    background: #333;
+}
 .top-month {
     color: #3333;
 }

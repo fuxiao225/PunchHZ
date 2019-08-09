@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class="index-page" bindtouchstart="touchStart" bindtouchend="touchEnd" animation="{{anima}}">
+<view class="index-page" wx:if="{{page == 1}}" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" animation="{{anima1}}">
   <!-- 头部 -->
   <navbar></navbar>
   
@@ -14,6 +14,37 @@
         <view class="title">新闻标题</view>
         <view class="author-time">
           <text class="author">作者：九七</text>
+          <text class="time" decode="true">&nbsp;&nbsp;&nbsp;1997-06-20</text>
+        </view>
+      </view>
+      <view class="news-content">
+      </view>
+    </view>
+  </view>
+
+  <!-- 分享部分 -->
+  <view class="share">
+    <image src="../../icon/share.png"></image>
+  </view>    
+    
+  
+</view>
+
+<view class="index-page" wx:if="{{page == 2}}" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" animation="{{anima2}}">
+  <!-- 头部 -->
+  <navbar></navbar>
+  
+  <view class="container">
+    <!-- 图片部分 -->
+    <view class="container-img">
+      <image src="../../image/index_page.jpg" mode="aspectFit"></image>
+    </view>
+    <!-- 稿件部分 -->
+    <view class="container-news">
+      <view class="title-author">
+        <view class="title">新闻标题</view>
+        <view class="author-time">
+          <text class="author">作者：haha九七</text>
           <text class="time" decode="true">&nbsp;&nbsp;&nbsp;1997-06-20</text>
         </view>
       </view>
